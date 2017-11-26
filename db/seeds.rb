@@ -1,0 +1,1 @@
+File.open("job.json", "w") { |f| f.write Job.all.to_json }

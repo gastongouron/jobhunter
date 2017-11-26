@@ -1,0 +1,15 @@
+<div class="job-container">
+	<p id="notice"><%= notice %></p>
+	<h1 class="title "><%= @job.heading %></h1>
+	<h2 class="has-text-info">
+		@<%= @job.company_name || "Helsinki" %>, City of <%= @job.municipality_name || "Duuntori" %></h2>
+	<h2></h2>
+
+	<br>
+	<p><%= @job.descr %></p>
+	<br>
+	<br>
+	<div style="margin: 0 auto;display: table;"">
+	<%= link_to "Apply at #{@job.company_name}", "https://duunitori.fi/tyopaikat/tyo/" + @job.slug, target: '_blank', :class => "button is-link is-medium is-outlined" %>
+	</div>
+</div>
